@@ -1,0 +1,194 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// flex
+nav, #hero, #one, #calculator, #oneOne, #two #roadMap {
+    display: flex;
+}
+#calculator, #oneOne, #two, #roadMap {
+    flex-direction: column;
+}
+
+.fancy {
+    font-family: 'Lobster', cursive;
+    font-weight: 400;
+}
+h2 {
+    text-decoration: underline;
+    font-family: 'Lobster', cursive;
+    font-weight: 400;
+}
+
+
+nav {
+    height: 4rem;
+    justify-content: space-between;
+    #hamburger {
+        margin: auto 1rem auto auto;
+        font-size: 1.5rem;
+    }
+    h1 {
+        margin: auto auto auto 1rem;
+        font-size: 2rem;
+    }
+}
+
+#hero {
+    height: 15rem;
+    width: 100vw;
+    background-image: url("/images/hero.png");
+    background-size: cover;
+    h1 {
+        margin: auto;
+        color: white;
+        text-shadow: 2px 1px 3px black;
+        font-weight: bold;
+    }
+}
+
+#one {
+    margin-top: -0.3rem;
+    height: 17.5rem;
+    border: 1px solid rgba(255, 0, 0, 0);
+    border-top: 1px solid rgba(255, 255, 255, 0.596);
+    padding: 2rem 0.5rem;
+    // background-color: rgb(143, 177, 106);
+    background-color: rgb(201, 137, 136);
+    #oneOne {
+        width: 50%;
+        border: 1px solid rgba(255, 0, 0, 0);
+        color: white;
+        h2 {
+            font-size: 2rem;
+            margin: 0.5rem auto 0 0.6rem;
+        }
+        p {
+            margin: 1rem auto auto 0.6rem ;
+            font-size: 1.4rem;
+            padding-right: 1rem;
+            font-weight: 400;
+            color: rgb(255, 255, 255);
+        }
+    }
+    #calculator {
+        border: 1px solid grey;
+        background-color: rgba(13, 121, 113, 0.7);
+        width: 50%;
+        box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.315);
+        #calcScreen {
+            height: 2rem;
+            width: 80%;
+            background-color: rgba(128, 128, 128, 0.726);
+            margin: 1rem auto;
+            color: white;
+            font-weight: bold;
+            font-size: 1.75rem;
+            text-align: right;
+            padding-right: 1rem;
+        }
+        #calcMods {
+            margin: 0rem auto;
+        }
+        button {
+            width: 2rem;
+            height: 2rem;
+        }
+        #calcNums {
+            margin: 1rem auto auto auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            #calcEquals {
+                position: absolute;
+                top: 34.95rem;
+                left: 16.15rem;
+                width: 4.5rem;
+            }
+            .calcNum {
+                margin: 0.2rem;
+            }
+        }
+    }
+}
+
+#two {
+    height: 17.5rem;
+    color: black;
+    h2 {
+        margin: 3rem auto 0 auto;
+        font-size: 2rem;
+        width: fit-content;
+    }
+    #roadMap {
+        margin: 1rem auto auto auto;
+        font-size: 3rem;
+        .roadMapIcons {
+            margin: 1rem auto auto auto;
+        }
+        .html {
+            color: orangered;
+        }
+        .css {
+            color: blue;
+        }
+        .js {
+            color: yellow;
+        }
+        .react {
+            color: rgb(117, 221, 255);
+            font-weight: bold;
+        }
+        .other {
+            color: purple;
+        }
+        #progressBarOuter {
+            margin: 0.5rem auto auto auto;
+            width: 17.33rem;
+            height: 1.5rem;
+            background-color: green;
+            border-radius: 15px;
+            display: flex;
+            #progressBarInner {
+                margin: auto auto auto 0.05rem;
+                border-radius: 15px;
+                width: 0rem;
+                height: 1.35rem;
+                background: greenyellow;
+            }
+        }
+    }
+
+    .progressBarAnimation {
+        animation: progressBar;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes progressBar {
+        0% {
+            width: 0rem;
+        } 100% {
+            width: 66%;
+        }
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin: 0.5rem auto auto auto;
+    }
+
+}
+
+footer {
+    display: flex;
+    height: 5rem;
+    background-color: black;
+    color: white;
+    padding: 0;
+    p {
+        margin: auto;
+    }
+}
